@@ -8,9 +8,9 @@ exports.gg = async () => {
       await driver.executeScript(`window.open('${static.url_gg}');`);
     }
 
+    await driver.manage().setTimeouts({ implicit: 300000 });
     let windows = await driver.getAllWindowHandles();
 
-    await driver.manage().setTimeouts({ implicit: 30000 });
 
     for (let x = 0; x < static.usernames.length; x++) {
       await driver.switchTo().window(windows[x]);
@@ -24,7 +24,7 @@ exports.gg = async () => {
     }
 
     // 50sec wait
-    await driver.manage().setTimeouts({ implicit: 50000 });
+    await driver.manage().setTimeouts({ implicit: 10000 });
 
     // tab switching then login
     for (let y = 0; y < static.usernames.length; y++) {
