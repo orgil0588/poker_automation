@@ -36,17 +36,8 @@ exports.gg = async () => {
         .findElement(By.name("password"))
         .sendKeys(`munkhzorig0233`, Key.RETURN);
     }
-    for (let y = 0; y < static.usernames.length; y++) {
-      await driver.switchTo().window(windows[y]);
-      await driver
-        .findElement(
-          By.xpath(
-            '/html/body/div/div/div/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div/div/div/div[2]'
-          )
-        )
-        .click();
-        
-    }
+
+    // click tournaments
   } catch (error) {
     if (error) {
       console.log(error);
