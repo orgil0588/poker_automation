@@ -1,2 +1,2 @@
-const { gg } = require("./gg");
-gg();
+// const { gg } = require("./gg");
+// gg();
